@@ -47,7 +47,8 @@ const App = () => {
       return;
     }
 
-    wsRef.current = new WebSocket('ws://localhost:5001');
+    wsRef.current = new WebSocket('wss://code-editor-mern-6amo.onrender.com');
+;
 
     wsRef.current.onopen = () => {
       setTerminalOutput((prev) => [...prev, { type: 'info', content: 'Connected to server' }]);
