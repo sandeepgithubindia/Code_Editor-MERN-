@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Editor from '@monaco-editor/react';
+// const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'ws://localhost:5001';
 
 const App = () => {
   const [code, setCode] = useState('name = input("Enter your name: ")\nprint("Hello, " + name)');
@@ -46,9 +47,8 @@ const App = () => {
       setRetryCount(0); // Reset for future attempts
       return;
     }
-
+    // wsRef.current = new WebSocket(BACKEND_URL);
     // wsRef.current = new WebSocket('wss://backend-production-7526.up.railway.app');
-
     wsRef.current = new WebSocket('ws://localhost:5001');
 
 ;
