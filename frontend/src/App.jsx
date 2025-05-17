@@ -47,7 +47,10 @@ const App = () => {
       return;
     }
 
-    wsRef.current = new WebSocket('wss://code-editor-mern-6amo.onrender.com');
+    // wsRef.current = new WebSocket('wss://backend-production-7526.up.railway.app');
+
+    wsRef.current = new WebSocket('ws://localhost:5001');
+
 ;
 
     wsRef.current.onopen = () => {
